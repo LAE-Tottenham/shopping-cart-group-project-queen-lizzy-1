@@ -20,4 +20,3 @@ def currency(amount,exh):
     else:
         return round(currencies[exh]*float(amount),2)
     
-#print(currency_convert(77.99))

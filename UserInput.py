@@ -20,7 +20,7 @@ def ListOfGoods():
    'Orange Juice': 0.90,
 }
    return Items
-#ListOfGoods()
+
 
 
 def Intro():
@@ -31,7 +31,7 @@ def Intro():
    print("Welcome to Queen Lizzys Online Supermarket!")
    print("-----------------------------------\n")
    time.sleep(1.5) 
-#Intro()
+
 
 def ItemPrinter():
    f = Figlet(font="slant")
@@ -42,7 +42,7 @@ def ItemPrinter():
    for x in Items:
        print(f"{x} for the price of £{Items[x]}")
    time.sleep(1.5)
-#ItemPrinter()
+
 
 def options():
     print("How can we help?\nLog In (L)\nView Account(V)\nSign Up (SU)\nShop (S)\nQuit(ANY OTHER KEY)")
@@ -58,7 +58,7 @@ def options():
     else:
         print("Thank you, goodbye.")
         quit()
-#options()
+
 
 def TotalItems():  
     n = 0
@@ -76,7 +76,7 @@ def TotalItems():
         if choice == 'N':
             n = 1
     return Basket
-#TotalItems()
+
 
 def PriceOfBasket(Basket):
     Price = 0
@@ -107,7 +107,7 @@ def DeliveryPrice(postcode):
     r = round(dist.query_postal_code('N17 0BX', postcode),2)
     DelPrice = round((r*3.0),2)
     return DelPrice
-#postcode()
+
 
 def VorM():
    Card = input("Would you like pay using Visa or Mastercard: ")
@@ -119,7 +119,7 @@ def VorM():
        print("Please enter a valid cardtype")
        VorM()
    return Cardtype
-#VorM()
+
 
 
 def delivery_slot():
