@@ -1,25 +1,41 @@
-#This is Armeen's codespace. 
 from UserInput import *
-from total_cost
-Items()
-#print items bought 
-print(Basket) 
-#print cost of items 
+from currency_exchange_tool import *
+def receipt(Bat,DelPri,Tot,Delslot,Card,PC,Type):
+    Items = ListOfGoods()
+ 
+    company_name = "Queen Lizzy's Online Shop"
 
-#print delivery cost 
-
-#print total cost of delivery and items 
-print(tot_cost)
-
-#print postcode 
-
-#print the card details
-print ()
+    f = Figlet(font="slant")
+    x = f.renderText("Queen Lizzy's Online Shop")
+    y = colored(x, "blue" , attrs=['bold'])
+    print(y)
+    print("-------------------------------------------------------\n")
+    time.sleep(1.5) 
 
 
-company_name = "Queen Lizzy's Online Shop"
+    print("*"*55) 
+    print("\t Product \t Product Price")
+    for i,x in enumerate(Bat):
+        print(f"\t{x} \t         {currency(Items[x],Type)}")
+    print("*"*55) 
 
-Message = "Thank you for shopping with us. Have a good day!"
+    print("\t\t\t Delivery Price" )
+    print(f"\t\t\t {DelPri}")
 
-#top border
-print()
+    print("="*55) 
+    print(f"\t\t\t Total" )
+    print(f"\t\t\t {Tot}" )
+
+    print("*"*55)  
+    print("\t\t\t Delivery Slot:")
+    print(f"\t\t\t {Delslot}")
+    print("\t\t\t Payment Method:")
+    print(f"\t\t\t {Card}")
+    print("\t\t\t Address:")
+    print(f"\t\t\t {PC}")
+
+    Message = "Thank you for shopping with us. Have a good day!"
+    print("\n\t{}\n".format(Message))
+
+    print("-------------------------------------------------------\n")
+
