@@ -70,7 +70,7 @@ def TotalItems():
             Basket.append(Item)
         else:
             print("Enter a item that is available")
-            TotalItems() 
+            continue
         choice = input("Want to continue - click any key to continue or enter N if you are done shopping: ").upper()
         time.sleep(0.2) 
         if choice == 'N':
